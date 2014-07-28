@@ -16,4 +16,19 @@ describe Triangle do
     test_triangle = Triangle.new(3,5,10)
     test_triangle.type.should eq false
   end
+
+  it 'when all sides are equal, returns equilateral' do
+    test_triangle = Triangle.new(3,3,3)
+    test_triangle.type.should eq ('Equilateral')
+  end
+
+  it 'return isosceles when exactly 2 sides are equal' do
+    test_triangle = Triangle.new(3,3,5)
+    test_triangle.type.should eq ("Isosceles")
+  end
+
+  it 'return scalene when no sides are equal' do
+    test_triangle = Triangle.new(4,2,3)
+    test_triangle.type.should eq ("Scalene")
+  end
 end

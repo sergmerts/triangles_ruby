@@ -24,7 +24,13 @@ class Triangle
 
   def type
     if side1 + side2 <= side3
-        false
+      false
+    elsif side1 == side2 && side1 == side3
+      "Equilateral"
+    elsif side1 == side2
+      "Isosceles"
+    elsif side1 != side2 && side2 != side3
+      "Scalene"
     end
   end
 end
